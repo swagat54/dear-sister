@@ -1,0 +1,48 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f0, #fffaf0);
+  color: #333;
+  overflow-x: hidden;
+}
+
+audio {
+  display: none;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.intro {
+  background: #ffd6e0;
+  color: #b30059;
+  font-size: 2rem;
+}
+
+.middle, .gif-section, .final, .end-note {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.gif-section img {
+  width: 250px;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+}
+
+.final h2 {
+  margin-top: 20px;
+  color: #b30059;
+}
+
+.end-note {
+  background: #fff0f5;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #8b008b;
+}

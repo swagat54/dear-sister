@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dear Sister 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<audio id="bg-music" autoplay loop>
+  <source src="song.mp3" type="audio/mp3" />
+</audio>
+
+<div class="container">
+
+  <!-- Page 1: Start Text Only -->
+  <section class="page start">
+    <h1>Dear Sister 💌</h1>
+  </section>
+
+  <!-- Page 2: Typing Effect -->
+  <section class="page intro">
+    <h2><span class="typing"></span></h2>
+  </section>
+
+  <!-- Page 3: Shayari 1 -->
+  <section class="page">
+    <p>Behen sirf ek naam nahi hoti,<br>Woh ek dua hoti hai... jo kabhi khatam nahi hoti ✨</p>
+  </section>
+
+  <!-- Page 4: Shayari 2 -->
+  <section class="page">
+    <p>Kabhi maa jaisi daante hai,<br>Kabhi dost banke sab kuch baant leti hai 💖</p>
+  </section>
+
+  <!-- Page 5: GIF -->
+  <section class="page">
+    <img src="sister.gif" alt="Sister GIF" />
+    <p>Jab tu rakhi baandhti hai...<br>Tab dil halka sa ro padta hai 🎀</p>
+  </section>
+
+  <!-- Page 6: Final Emotion -->
+  <section class="page">
+    <p>Tu meri zindagi ka wo hissa hai<br>Jiske bina main adhoora hoon 🌙</p>
+    <h2>~ Your Loving Brother ❤️</h2>
+  </section>
+
+  <!-- Page 7: Final Note -->
+  <section class="page end">
+    <p>This page is for every sister<br>Who made her brother smile with teary eyes 💫</p>
+  </section>
+
+</div>
+
+<script>
+  const text = "Rishton mein sabse pyaara rishta... ek behen ka hota hai 💌";
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      document.querySelector(".typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+
+  window.addEventListener('load', () => {
+    const music = document.getElementById("bg-music");
+    music.volume = 0.4;
+    music.play().catch(() => {
+      document.body.addEventListener("click", () => music.play());
+    });
+    typeWriter();
+  });
+</script>
+
+</body>
+</html>
